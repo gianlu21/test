@@ -1,0 +1,10 @@
+{
+    "URL_GET_PROFILE": "https://dev2smartanpr.servizilocalispa.it/AuthenticationManager/api/account/getprofile?clientId=bari_test&entityId=8fefaafb-5a9f-44a6-b499-e4b56998eaf4",
+    "URL_GET_PROFILE_CONTAINER": "https://bari.servizilocalispa.it:49157/api/account/getprofile",
+    "URL_GET_FASCICOLO": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/contribuente/GetFascicolo",
+    "getAccountSid": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/cartella/documento/file/GetBinarioPagamento",
+    "getflexFlowSid": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/cartella/documento/file/GetBinarioPagamento",
+    "URL_GET_DOWNLOAD": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/cartella/documento/file/GetBinarioPagamento",
+    "URL_GET_PAGAMENTI_EFFETTUATI_CONTRIBUENTE": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/contribuente/GetPagamentiEffettuati",
+    "URL_GET_PAGAMENTI_DOVUTI": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/cartelle/GetPagamentiDovuti"
+}

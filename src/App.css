@@ -1,0 +1,192 @@
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.it-header-slim-wrapper {
+  background:#1d3666 !important  ;
+  padding: 6.5px 18px;
+}
+
+
+.linkMenu{
+  
+  margin-right: 2em ;
+  color: white;
+}
+
+
+.form-control[readonly]  {
+  background: white ;
+  cursor: default;
+
+}
+
+
+
+
+
+
+
+.collapse-header [data-toggle=collapse] {
+
+  color: #06c;
+
+}
+
+.react-select-container {
+  background-color: 'red';
+}
+
+.react-select__menu {
+  height: 100vh;
+}
+
+.dropdown-menu .inner {
+display: block;
+}
+
+.dropdownMenuLink{
+  background: rgb(46, 88, 166);
+}
+
+
+
+
+.stemmaComune{
+  width: 50Px;
+  height: 60px;
+
+
+}
+
+
+
+.switchComune{
+  color: white;
+  background: none;
+  border: none; 
+}
+
+
+.textComune{
+  font-size: 25px  !important;
+  margin-bottom: 0  !important;
+  font-weight: 600;
+  letter-spacing: unset  !important;
+  line-height: 1.1  !important;
+  background: red  !important;
+
+}
+
+.storeApp {
+  width:  150px;
+}
+
+
+.HeroHome{
+  font-size: 23px    ;
+  color: white;
+}
+
+.HeroHomeText{
+  color: white;
+  margin-top: 15px;
+  font-size: 15px  ;
+}
+
+.btnHome{  
+  margin-top: 5px ;
+}
+
+.btn-primary {
+  background-color: #2e58a6  !important;
+  border-color: #080e1a !important;
+}
+
+
+.it-header-center-wrapper {
+  background: #2e58a6  !important;
+}
+
+.it-header-navbar-wrapper {
+  background: #2e58a6 !important;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .entityComune{
+
+    font-size: 1em;
+  }
+
+  .it-header-slim-wrapper 
+  {   background: #004080;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+
+}
+
+.trasparente{
+
+  z-index: 400;
+  position: fixed;
+  background: aliceblue;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff1e;
+  top: 0;
+  left: 0;
+
+}
+
+
+.spinner {
+
+  top: 30%;
+  position: fixed;
+  left: 50%;
+  z-index: 401;
+
+}
