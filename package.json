@@ -37,6 +37,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
     "react-app-rewired": "^2.1.5"
   }
 }
