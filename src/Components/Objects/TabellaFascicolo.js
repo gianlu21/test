@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import ListApi from "../Utility/ListApi";
 import configuration from "../../config.json";
 
-import FlexWebchat from "../../FlexWebchat";
 
 class TabellaFascicolo extends React.Component {
     constructor(props) {
@@ -69,7 +68,7 @@ class TabellaFascicolo extends React.Component {
                                                         <h3>Cartella</h3>
                                                     </th>
 
-                                                    <th className={"align-middle "}>
+                                                    <th className={"align-middle d-md-block  d-none d-lg-block"}>
                                                         <h3> Scarica/Info</h3>
 
 
@@ -102,16 +101,25 @@ class TabellaFascicolo extends React.Component {
                                                                             <div className="row"><b>Anno Imposta: </b> {obbj.annoImposta}</div>
                                                                             <div className="row"><b>Importo Dovuto: </b> {obbj.importoDovuto}</div>
                                                                             <div className="row"><b>Importo Versato: </b> {obbj.importoVersato}</div>
-                                                                    </div>
+                                                                        </div>
+
+                                                                        <div className="col-12 d-none d-sm-block d-md-none d-block d-sm-none">
+                                                                            <Link to={`fascicolo/id=${obbj.pkCartella}`}
+                                                                                style={{ color: "black" }}
+                                                                            >  <button type="button" className="btn btn-primary btn-sm" style={{ marginRight: "5px" }}>Dettaglio</button>
+
+                                                                            </Link>
+                                                                            <button type="button" className="btn btn-secondary btn-sm" onClick={() => getPdf(obbj.pkCartella)}>Scarica</button>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
 
 
 
                                                             </td>
-                                                            <td className="text-center">
+                                                            <td className="text-center  d-none d-md-block d-lg-block">
 
-                                                                <Link to={`fascicolo/${obbj.pkCartella}`}
+                                                                <Link to={`fascicolo/id=${obbj.pkCartella}`}
                                                                     style={{ color: "black" }}
                                                                 >  <button type="button" className="btn btn-primary btn-sm" style={{ marginRight: "5px" }}>Dettaglio</button>
 
