@@ -74,25 +74,25 @@ class ListaPagamentiEffettuati extends React.Component {
 
 
 
-                                <div class="row">
-                                    <div class="col-12 col-lg-12">
+                                <div className="row">
+                                    <div className="col-12 col-lg-12">
 
-                                        <div class="card-wrapper card-space">
-                                            <div class="card card-bg">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">{obbj.pkPagamento} - <b>Numero rata: </b> {obbj.numeroRata}</h5><hr />
+                                        <div className="card-wrapper card-space">
+                                            <div className="card card-bg">
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{obbj.pkPagamento} - <b>Numero rata: </b> {obbj.numeroRata}</h5><hr />
                                                     <div className="row">
-                                                        <div className="col-4">
-                                                            <b>Data Pagamento: </b> {moment(new Date(obbj.dataPagamento)).format('DD-MM-YYYY')}
+                                                        <div className="col-sm-6 col-lg-4">
+                                                            <div className="row"><b>Data Pagamento: </b> {moment(new Date(obbj.dataPagamento)).format('DD-MM-YYYY')}</div>
                                                         </div>
-                                                        <div className="col-4">
-                                                            <b>Metodo di pagamento: </b> {obbj.metodoDiPagamento ? obbj.metodoDiPagamento : "Non pervenuto"}
+                                                        <div className="col-sm-6 col-lg-4">
+                                                            <div className="row"><b>Metodo di pagamento: </b> {obbj.metodoDiPagamento ? obbj.metodoDiPagamento : "Non pervenuto"}</div>
                                                         </div>
-                                                        <div className="col-2">
-                                                            <b>Importo: €</b> {obbj.importo}
+                                                        <div className="col-sm-6 col-lg-2">
+                                                            <div className="row"><b>Importo: €</b> {obbj.importo}</div>
                                                         </div>
-                                                        <div className="col-2">
-                                                            <button type="button" class="btn btn-primary" onClick={() => getPdf(obbj.pkCartella)}>Scarica ricevuta</button>
+                                                        <div className="col-sm-6 col-lg-2">
+                                                            <div className="row"><button type="button" className="btn btn-primary" onClick={() => getPdf(obbj.pkCartella)}>Scarica ricevuta</button></div>
 
                                                         </div>
                                                     </div>

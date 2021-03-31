@@ -11,3 +11,6 @@ before_install:
 script:
   - docker run -e CI=true gianlu21/test npm run test
 
+deploy:
+  provider: elasticbeanstalk
+

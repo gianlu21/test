@@ -84,22 +84,24 @@ class ListaPagamentiAttesi extends React.Component {
                                                 <div class="card-body">
                                                     <h5 class="card-title">{obbj.pkRata} - <b>Numero rata: </b> {obbj.numeroRata}</h5><hr />
                                                     <div className="row">
-                                                        <div className="col-4">
-                                                            <b>Data Pagamento: </b> {moment(new Date(obbj.dataScadenza)).format('DD-MM-YYYY')}
+                                                        <div className="col-sm-8 col-lg-4">
+                                                            <div className="row"><b>Data Pagamento: </b> {moment(new Date(obbj.dataScadenza)).format('DD-MM-YYYY')}</div>
                                                         </div>
-                                                        {/* <div className="col-4">
+                                                        {/* <div className="col-sm-6 col-lg-4">
                                                             <b>Metodo di pagamento: </b> {obbj.metodoDiPagamento ? obbj.metodoDiPagamento : "Non pervenuto"}
                                                         </div> */}
-                                                        <div className="col-4">
-                                                            <b>Importo: €</b> {obbj.importoDovuto}
+                                                        <div className="col-sm-4 col-lg-4">
+                                                            <div className="row"><b>Importo: €</b> {obbj.importoDovuto}</div>
                                                         </div>
-                                                        <div className="col-2">
-                                                            <button type="button" class="btn btn-primary">Paga Ora</button>
+                                                        <div className="row col-12 col-lg-4">
+                                                            <div className="col-6">
+                                                                <div className="row"><button type="button" class="btn btn-primary">Paga Ora</button></div>
 
-                                                        </div>
-                                                        <div className="col-2">
-                                                            <button type="button" class="btn btn-secondary">Dettaglio</button>
+                                                            </div>
+                                                            <div className="col-6">
+                                                                <div className="row"><button type="button" class="btn btn-secondary">Dettaglio</button></div>
 
+                                                            </div>
                                                         </div>
                                                     </div>
 

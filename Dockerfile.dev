@@ -2,9 +2,9 @@
 FROM node
 
 
-#RUN mkdir -p /app/src
+RUN mkdir -p /app/src
 
-WORKDIR '/app'
+WORKDIR /app/src
 
 COPY package.json .
 
