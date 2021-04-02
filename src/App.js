@@ -21,6 +21,15 @@ import Body from "./Components/Layout/Body";
 
 class App extends React.Component {
 
+  IncrementItem = () => {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  // AddToCart = (object) => {
+  //   this.setState({ carrello: [...this.state.carrello, object] })
+
+  // }
+
   constructor(props) {
     super(props);
     const cookies = new Cookies();
@@ -33,6 +42,8 @@ class App extends React.Component {
       defaultEntity: [],
       api_token: cookies.get('api_token'),
       localEnte: cookies.get('ente'),
+      count: 0,
+      carrello: [],
       listaLinkUtente: [
         { testo: "Home", url: "/home" },
         { testo: "Domande Frequenti", url: "/faq" },
@@ -43,7 +54,7 @@ class App extends React.Component {
 
 
 
-        
+
 
 
     if (this.state.api_token) {
@@ -60,6 +71,22 @@ class App extends React.Component {
         .catch((error) => {
           console.log(error)
         });
+
+      ListApi.getData(this.state.api_token, configuration.URL_GET_CARRELLO_COUNT)
+        .then((response) => {
+          console.log(response.data);
+          this.setState({
+            count: response.data
+
+          });
+
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+
+
+
     }
 
 
@@ -72,7 +99,7 @@ class App extends React.Component {
 
 
 
-  
+
 
 
 
@@ -85,7 +112,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        
+
+        {    console.log(this.state.carrello)}
         <Header
 
           LastName={this.state.utente.LastName}
@@ -95,11 +123,13 @@ class App extends React.Component {
           links={this.state.listaLinkUtente}
           linksEsterni={this.state.utente.Apps}
           AreaName={!this.state.localEnte ? this.state.defaultEntity : this.state.localEnte}
+          conteggio={this.state.count}
+
         />
 
         <Router>
 
-          <Body user={this.state.utente}></Body>
+          <Body user={this.state.utente} carrello={this.IncrementItem}></Body>
         </Router>
 
 

@@ -72,7 +72,7 @@ class PagamentiAttesi extends React.Component {
                     <h2 style={{ textAlign: 'center' }}>Pagamenti Attesi</h2><br /><br />
                     <div className="col-12">
 
-                        {this.state.loading ? <ListaPagamentiAttesi>{this.state.pagamentiDovuti}</ListaPagamentiAttesi> :
+                        {this.state.loading ? <ListaPagamentiAttesi carrello3={this.props.carrello2}>{this.state.pagamentiDovuti}</ListaPagamentiAttesi> :
                             <div class="col-12">
                                 <div class="trasparente">
                                     <div class="progress-spinner progress-spinner-active spinner">

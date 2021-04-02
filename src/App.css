@@ -190,3 +190,8 @@ display: block;
   z-index: 401;
 
 }
+
+
+.main-body{
+  min-height: 500px;
+}

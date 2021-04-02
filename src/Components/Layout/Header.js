@@ -4,6 +4,7 @@ import iconSprite from "bootstrap-italia/dist/svg/sprite.svg";
 import Cookies from "universal-cookie";
 import smartcitylogo from "../../Img/smartcitylogo.PNG";
 import mainLogo from "../../Img/smartAnpr_logo_intro.png";
+import CarrelloView from "../Objects/CarrelloView";
 
 class Header extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Header extends React.Component {
       localEnte: cookies.get("ente"),
     };
   }
+
 
   deleteCookie() {
     const cookies = new Cookies();
@@ -93,6 +95,7 @@ class Header extends React.Component {
     cookies.set("ente", name, { path: "/" });
     window.location.href = "/home";
   };
+
 
   render() {
     const listaComuni = [
@@ -183,6 +186,8 @@ class Header extends React.Component {
                             <use href={`${iconSprite}#it-horn`} />
                           </svg>
                           <span className="badge badge-light">0</span>
+                          {" "}
+                          <CarrelloView countCarrello={this.props.conteggio}></CarrelloView>
                           {/* <span className="badge badge-danger">9</span> */}
 
                           {/*                                        

@@ -12,6 +12,8 @@ import Servizi from "../Page/Servizi.js";
 
 import Fascicolo from "../Page/Fascicolo.js";
 
+import Carrello from "../Page/Carrello.js";
+
 import PagamentiEffettuati from "../Page/PagamentiEffettuati.js";
 
 import PagamentiAttesi from "../Page/PagamentiAttesi.js";
@@ -32,7 +34,7 @@ class Body extends React.Component {
   render() {
     return (
 
-      <main role="main">
+      <main role="main" className="main-body">
         {this.state.api_token ? (
           <div>
             <Switch>
@@ -53,7 +55,11 @@ class Body extends React.Component {
               </Route>
 
               <Route path="/pagamentiattesi">
-                <PagamentiAttesi></PagamentiAttesi>
+                <PagamentiAttesi carrello2={this.props.carrello}></PagamentiAttesi>
+              </Route>
+
+              <Route path="/carrello">
+                <Carrello></Carrello>
               </Route>
 
               <Route path="/">

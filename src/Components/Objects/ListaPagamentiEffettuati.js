@@ -54,13 +54,6 @@ class ListaPagamentiEffettuati extends React.Component {
         }
 
 
-        let conuntAcounr = 0;
-
-        function counter() {
-            conuntAcounr += 1;
-        }
-
-
 
         return (
             <>
