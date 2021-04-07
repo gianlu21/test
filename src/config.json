@@ -8,5 +8,6 @@
     "URL_GET_PAGAMENTI_EFFETTUATI_CONTRIBUENTE": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/contribuente/GetPagamentiEffettuati",
     "URL_GET_PAGAMENTI_DOVUTI": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/cartelle/GetPagamentiDovuti",
     "URL_GET_CARRELLO": "http://10.1.0.27/api/values",
-    "URL_GET_CARRELLO_COUNT": "http://10.1.0.27/api/count"
+    "URL_GET_CARRELLO_COUNT": "http://10.1.0.27/api/count",
+    "URL_GET_CARTELLE_CORRELATE": "https://dev2smartanpr.servizilocalispa.it/SL_Hub_API/api/cartelle/GetCartelleCorrelate"
 }

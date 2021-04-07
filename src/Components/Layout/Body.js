@@ -18,6 +18,8 @@ import PagamentiEffettuati from "../Page/PagamentiEffettuati.js";
 
 import PagamentiAttesi from "../Page/PagamentiAttesi.js";
 
+import DettaglioCartella from "../Page/DettaglioCartella.js";
+
 
 
 class Body extends React.Component {
@@ -46,7 +48,14 @@ class Body extends React.Component {
                 <Faq></Faq>
               </Route>
 
-              <Route path="/fascicolo">
+              {/* <Route path={"/fascicolo/:id"} component={DettaglioCartella} carrello2={"ciao"}></Route> */}
+
+              {/* <Route path={"/fascicolo/:id"} component={() => <DettaglioCartella carrello2={`Props through component`} />} /> */}
+
+              <Route path={"/fascicolo/:id"} render={(props) => <DettaglioCartella {...props} carrello2={this.props.carrello} />} />
+
+
+              <Route exact path="/fascicolo">
                 <Fascicolo user={this.props.user}></Fascicolo>
               </Route>
 

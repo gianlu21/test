@@ -195,3 +195,12 @@ display: block;
 .main-body{
   min-height: 500px;
 }
+
+
+.pagamentiDovuti{
+
+  background: whitesmoke;
+  padding: 1%;
+  max-height: 350px;
+  overflow-y: auto;
+}

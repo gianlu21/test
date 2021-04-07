@@ -77,11 +77,11 @@ class ElencoFascicolo extends React.Component {
 
                     <h3 style={{ textAlign: '' }}>Fascicolo del Contribuente: <b>{this.props.user.LastName} {this.props.user.FirstName} - {this.props.user.FiscalCode}</b></h3><br></br>
 
-                    {this.state.loading ? <TabellaFascicolo >{this.state.fascicolo}</TabellaFascicolo> :
-                        <div class="col-12">
-                            <div class="trasparente">
-                                <div class="progress-spinner progress-spinner-active spinner">
-                                    <span class="sr-only">Caricamento...</span>
+                    {this.state.loading ? <TabellaFascicolo table={true} >{this.state.fascicolo}</TabellaFascicolo> :
+                        <div className="col-12">
+                            <div className="trasparente">
+                                <div className="progress-spinner progress-spinner-active spinner">
+                                    <span className="sr-only">Caricamento...</span>
                                 </div>
                             </div>
                         </div>
