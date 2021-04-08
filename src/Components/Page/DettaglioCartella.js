@@ -48,7 +48,7 @@ class DettaglioCartella extends React.Component {
     componentDidMount() {
 
         const queryString = require('query-string');
-        const { match: { params } } = this.props;
+        // const { match: { params } } = this.props;
         const pKCartellaParsed = queryString.parse(this.props.match.params.id);
         this.setState({
             pkCartella: pKCartellaParsed.id,
@@ -95,7 +95,7 @@ class DettaglioCartella extends React.Component {
                 });
 
             console.clear();
-            var data = JSON.stringify({ "pkCartella": this.state.pkCartella, "pkTipoCartella": "" });
+            data = JSON.stringify({ "pkCartella": this.state.pkCartella, "pkTipoCartella": "" });
             ListApi.getPost(this.state.api_token, configuration.URL_GET_CARTELLE_CORRELATE, data)
                 .then((response) => {
 

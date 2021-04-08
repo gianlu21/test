@@ -124,10 +124,10 @@ class Header extends React.Component {
                             <>
                               <div className="nav-item d-none d-lg-block">
                                 {this.props.linksEsterni &&
-                                  this.props.linksEsterni.map((linkObb) => (
+                                  this.props.linksEsterni.map((linkObb, index) => (
                                     <span
                                       className="linkMenu"
-                                      key={linkObb.Title}
+                                      key={index}
                                     >
                                       <a href={linkObb.Url}>{linkObb.Title}</a>
                                     </span>
@@ -154,8 +154,8 @@ class Header extends React.Component {
                                       <ul className="link-list">
                                         {this.props.linksEsterni &&
                                           this.props.linksEsterni.map(
-                                            (linkObb) => (
-                                              <li key={linkObb.Title}>
+                                            (linkObb, index) => (
+                                              <li key={index}>
                                                 <a
                                                   className="list-item"
                                                   href={linkObb.Url}
@@ -253,22 +253,22 @@ class Header extends React.Component {
                             >
                               <div className="link-list-wrapper">
                                 <ul className="link-list">
-                                  {listaComuni.map((obbj) => (
-                                    <>
-                                      {this.props.AreaName !== obbj.value && (
-                                        <li>
-                                          <a
-                                            className="list-item"
-                                            href="#"
-                                            onClick={() =>
-                                              this.ChangeEnte(obbj.value)
-                                            }
-                                          >
-                                            <span>{obbj.title}</span>
-                                          </a>
-                                        </li>
-                                      )}
-                                    </>
+                                  {listaComuni.map((obbj, index) => (
+
+                                    this.props.AreaName !== obbj.value && (
+                                      <li key={index}>
+                                        <a
+                                          className="list-item"
+                                          href="#"
+                                          onClick={() =>
+                                            this.ChangeEnte(obbj.value)
+                                          }
+                                        >
+                                          <span>{obbj.title}</span>
+                                        </a>
+                                      </li>
+                                    )
+
                                   ))}
                                 </ul>
                               </div>
@@ -315,15 +315,15 @@ class Header extends React.Component {
                         <div className="menu-wrapper">
                           <ul className="navbar-nav">
                             {this.props.links &&
-                              this.props.links.map((linkObb) => (
+                              this.props.links.map((linkObb, index) => (
                                 <li
                                   className="nav-item active"
-                                  key={linkObb.testo}
+                                  key={index}
                                 >
                                   <a
                                     className="nav-link"
                                     href={linkObb.url}
-                                    key={linkObb.Title}
+
                                   >
                                     <span>{linkObb.testo} </span>
                                     <span className="sr-only">current</span>

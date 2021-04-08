@@ -7,9 +7,6 @@ import iconSprite from "bootstrap-italia/dist/svg/sprite.svg";
 
 
 
-import ListApi from "../Utility/ListApi";
-import configuration from "../../config.json";
-
 class Cartella extends React.Component {
     constructor(props) {
         super(props);
@@ -21,28 +18,7 @@ class Cartella extends React.Component {
     }
 
     render() {
-        const getPdf = async (idCartella) => {
-            var data = JSON.stringify({ pkCartella: idCartella, pkTipoCartella: "" });
 
-            ListApi.getFile(
-                this.state.api_token,
-                configuration.URL_GET_DOWNLOAD,
-                data
-            )
-                .then(function (response) {
-                    var b64 = response.data.binaryFile;
-
-                    var a = window.document.createElement("a");
-                    a.href = "data:application/octet-stream;base64," + b64;
-                    a.download = response.data.nomeFile;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        };
 
 
         let cartella = this.props.children;
